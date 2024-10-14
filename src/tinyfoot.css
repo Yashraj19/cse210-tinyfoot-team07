@@ -1,0 +1,23 @@
+#tinyfoot-container {
+  display: inline-block;
+  position: relative;
+}
+
+#tinyfoot-button {
+  background-color: red;
+}
+
+#tinyfoot-popup {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+
+  background: white;
+  border: 3px solid black;
+  border-radius: 2px;
+}
+
+#tinyfoot-popup.active {
+  display: unset;
+}
