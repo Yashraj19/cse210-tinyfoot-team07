@@ -1,1 +1,2 @@
-../src/tinyfoot.css
+#tinyfoot-container{display:inline-block;position:relative}#tinyfoot-button{background-color:red}#tinyfoot-popup{display:none;z-index:1;position:absolute;top:20px;background:#fff;border:3px solid #000;border-radius:2px}#tinyfoot-popup.active{display:unset}
+/*# sourceMappingURL=tinyfoot.css.map */
