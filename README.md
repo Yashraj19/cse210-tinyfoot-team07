@@ -2,10 +2,12 @@
 
 ## Usage
 
-- Start a web server using python:
+```sh
+npm install && npm start
+```
 
-    ```sh
-    python -m http.server
-    ```
+## Format code
 
-- Browse `http://localhost:8000/demo/demo.html` in web browser.
+```sh
+npm run format
+```

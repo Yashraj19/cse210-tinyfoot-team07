@@ -1,0 +1,23 @@
+{
+  "name": "tinyfoot",
+  "type": "module",
+  "description": "A tiny footnote library",
+  "version": "0.0.1",
+  "repository": "Yashraj19/cse210-tinyfoot-team07",
+  "browser": "dist/tinyfoot.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:script": "terser src/tinyfoot.js -o dist/tinyfoot.js --compress --mangle --mangle-props --module --source-map",
+    "build:style": "cleancss src/tinyfoot.css -o dist/tinyfoot.css --source-map -O2",
+    "build:html": "cp src/template.html dist/template.html",
+    "build": "npm run clean && mkdir dist && npm run build:script && npm run build:style && npm run build:html",
+    "format": "prettier --write .",
+    "start": "npm run build && http-server -o /demo/demo.html"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "http-server": "^14.1.1",
+    "prettier": "^3.3.3",
+    "terser": "^5.34.1"
+  }
+}

@@ -1,9 +1,9 @@
 let activePopup = null;
-const template = await fetch('../dist/template.html')
-  .then(s => s.text())
-  .then(t => new DOMParser()
-    .parseFromString(t, 'text/html')
-    .querySelector('template'));
+const template = await fetch("../dist/template.html")
+  .then((s) => s.text())
+  .then((t) =>
+    new DOMParser().parseFromString(t, "text/html").querySelector("template"),
+  );
 
 customElements.define(
   "tinyfoot-footnote",
@@ -12,7 +12,9 @@ customElements.define(
       super();
       const root = this.attachShadow({ mode: "open" });
       root.appendChild(template.content.cloneNode(true));
-      root.getElementById("tinyfoot-button").addEventListener("click", this.onClick.bind(this))
+      root
+        .getElementById("tinyfoot-button")
+        .addEventListener("click", this.onClick.bind(this));
     }
 
     onClick() {
@@ -29,5 +31,5 @@ customElements.define(
       thisPopup.classList.add("active");
       activePopup = thisPopup;
     }
-  }
+  },
 );
