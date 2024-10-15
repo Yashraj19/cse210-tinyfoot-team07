@@ -15,21 +15,30 @@ customElements.define(
       root
         .getElementById("tinyfoot-button")
         .addEventListener("click", this.onClick.bind(this));
+      root.getElementById("tinyfoot-popup").addEventListener("click", event => event.stopPropagation());
     }
 
-    onClick() {
+    onClick(event) {
       const thisPopup = this.shadowRoot.getElementById("tinyfoot-popup");
       if (activePopup === thisPopup) {
         activePopup = null;
         thisPopup.classList.remove("active");
-        return;
+      } else {
+        if (activePopup !== null) {
+          activePopup.classList.remove("active");
+        }
+        thisPopup.classList.add("active");
+        activePopup = thisPopup;
       }
 
-      if (activePopup !== null) {
-        activePopup.classList.remove("active");
-      }
-      thisPopup.classList.add("active");
-      activePopup = thisPopup;
+      event.stopPropagation();
     }
   },
 );
+
+window.addEventListener("click", () => {
+  if (activePopup != null) {
+    activePopup.classList.remove("active");
+    activePopup = null;
+  }
+});
