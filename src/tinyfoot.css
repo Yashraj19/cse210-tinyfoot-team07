@@ -63,7 +63,7 @@ prevent the note to be covered by the right hand window
 #tinyfoot-popup.right-edge {
   left: auto;
   right: 0;
-  transform-origin: top right;
+  transform: none;
 }
 
 /**
