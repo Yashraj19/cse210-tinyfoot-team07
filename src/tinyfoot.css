@@ -16,6 +16,18 @@
   transition: background-color 0.3s ease;
 }
 
+:host {
+  counter-increment: tinyfoot-button;
+}
+
+#tinyfoot-button::after {
+  content: "⋯";
+}
+
+#tinyfoot-button.numeric::after {
+  content: counter(tinyfoot-button);
+}
+
 #tinyfoot-button:hover {
   background-color: rgba(34, 165, 235, 0.967);
   transform: scale(1.2);

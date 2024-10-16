@@ -22,13 +22,19 @@
     <template id="tinyfoot-template">
       <link rel="stylesheet" href="../dist/tinyfoot.css" />
       <span id="tinyfoot-container">
-        <button id="tinyfoot-button">...</button>
+        <button id="tinyfoot-button"></button>
         <div id="tinyfoot-popup">
           <slot></slot>
         </div>
       </span>
     </template>
-    <script type="module" src="../dist/tinyfoot.js"></script>
+    <script type="module">
+      import tinyfoot from "../dist/tinyfoot.js";
+      tinyfoot({
+        numeric: true,
+        bottom: true,
+      });
+    </script>
 
     <div>
       <p>
