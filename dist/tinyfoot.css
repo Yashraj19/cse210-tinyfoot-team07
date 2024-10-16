@@ -1,2 +1,57 @@
-#tinyfoot-container{display:inline-block;position:relative}#tinyfoot-button{background-color:red}#tinyfoot-popup{display:none;z-index:1;position:absolute;top:20px;background:#fff;border:3px solid #000;border-radius:2px}#tinyfoot-popup.active{display:unset}
+#tinyfoot-container {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+#tinyfoot-button {
+  background-color: #4dd795;
+  color: #fff;
+  vertical-align: middle;
+  padding: 0.5px 10px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#tinyfoot-button:hover {
+  background-color: rgba(34, 165, 235, 0.967);
+  transform: scale(1.2);
+}
+#tinyfoot-popup {
+  display: inline-block;
+  z-index: 1;
+  word-wrap: normal;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007fce;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 8px rgba(215, 215, 215, 0.342);
+  padding: 10px;
+  min-width: 120px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+#tinyfoot-popup.active {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+#tinyfoot-popup.left-edge {
+  left: 0;
+  transform: none;
+}
+#tinyfoot-popup.right-edge {
+  left: auto;
+  right: 0;
+  transform-origin: top right;
+}
+#tinyfoot-popup.bottom-edge {
+  top: auto;
+  bottom: 0;
+  transform-origin: bottom left;
+}
 /*# sourceMappingURL=tinyfoot.css.map */

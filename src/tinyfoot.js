@@ -15,7 +15,9 @@ customElements.define(
       root
         .getElementById("tinyfoot-button")
         .addEventListener("click", this.onClick.bind(this));
-      root.getElementById("tinyfoot-popup").addEventListener("click", event => event.stopPropagation());
+      root
+        .getElementById("tinyfoot-popup")
+        .addEventListener("click", (event) => event.stopPropagation());
     }
 
     onClick(event) {
@@ -29,6 +31,19 @@ customElements.define(
         }
         thisPopup.classList.add("active");
         activePopup = thisPopup;
+
+        // Prevent the popup from overflowing
+        for (const c of ["left-edge", "right-edge", "bottom-edge"]) {
+          activePopup.classList.remove(c);
+        }
+        const rect = thisPopup.getBoundingClientRect();
+        if (rect.left < 0) {
+          thisPopup.classList.add("left-edge");
+        } else if (rect.left + rect.width > window.innerWidth) {
+          thisPopup.classList.add("right-edge");
+        } else if (rect.y + rect.height > window.innerHeight) {
+          thisPopup.classList.add("bottom-edge");
+        }
       }
 
       event.stopPropagation();

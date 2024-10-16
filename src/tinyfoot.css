@@ -4,7 +4,6 @@
   vertical-align: middle;
 }
 
-
 #tinyfoot-button {
   background-color: rgb(77, 215, 149);
   color: white;
@@ -28,15 +27,15 @@
   word-wrap: normal;
   position: absolute;
   top: 40px;
-  left:50%;
+  left: 50%;
   transform: translateX(-50%);
   background: rgb(0, 127, 206);
-  color:rgb(255, 255, 255);
-  
+  color: rgb(255, 255, 255);
+
   border-radius: 10px;
   box-shadow: 5px 5px 8px rgba(215, 215, 215, 0.342);
   padding: 10px;
-  min-width:120px;
+  min-width: 120px;
 
   opacity: 0;
 
@@ -44,19 +43,18 @@
 }
 
 #tinyfoot-popup.active {
-  display: inline-block; 
-  opacity: 1; 
+  display: inline-block;
+  opacity: 1;
 
   transition: opacity 200ms ease-in-out;
- 
 }
 
 /**
 prevent the note to be covered by the left hand window
 */
 #tinyfoot-popup.left-edge {
-  left: 0; 
-  transform: none; 
+  left: 0;
+  transform: none;
 }
 
 /**
@@ -65,7 +63,7 @@ prevent the note to be covered by the right hand window
 #tinyfoot-popup.right-edge {
   left: auto;
   right: 0;
-  transform-origin: top right; 
+  transform-origin: top right;
 }
 
 /**
