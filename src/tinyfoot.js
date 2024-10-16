@@ -1,9 +1,5 @@
 let activePopup = null;
-const template = await fetch("../dist/template.html")
-  .then((s) => s.text())
-  .then((t) =>
-    new DOMParser().parseFromString(t, "text/html").querySelector("template"),
-  );
+const template = document.getElementById("tinyfoot-template");
 
 customElements.define(
   "tinyfoot-footnote",
