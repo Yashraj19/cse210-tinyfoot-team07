@@ -3,8 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinyFoot</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TinyFoot Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1d1f21;
+            color: #c5c8c6;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #4A90E2, #50E3C2);
+            color: #fff;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        section {
+            margin: 30px 0;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #50E3C2;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #282a2e;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        ul li:hover {
+            transform: translateY(-5px);
+        }
+        ul li a {
+            text-decoration: none;
+            color: #50E3C2;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+            transition: color 0.3s;
+        }
+        ul li a:hover {
+            color: #4A90E2;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        footer p {
+            background: #282a2e;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 0;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #50E3C2;
+            color: #1d1f21;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #4A90E2;
+        }
+    </style>
 </head>
 <body>
     <!-- Project Heading -->
@@ -19,19 +121,42 @@
         <h2>Useful Links</h2>
         <ul>
             <li><a href="https://github.com/Yashraj19/cse210-tinyfoot-team07/tree/main" target="_blank">GitHub Repository</a></li>
-            <li><a href="https://Yashraj19.github.io/cse210-tinyfoot-team07/demo/demo.html" target="_blank">View Demo</a></li>
         </ul>
+    </section>
+
+    <!-- Embedded Demo -->
+    <section>
+        <h2>Live Demo</h2>
+        <iframe id="demoFrame" src="https://Yashraj19.github.io/cse210-tinyfoot-team07/demo/demo.html"></iframe>
     </section>
 
     <!-- Project Description -->
     <section>
         <h2>Project Description</h2>
-        <p>Placeholder for description</p>
+        <p>This project focuses on developing TinyFoot, a warmup exercise for CSE 210. Our goal is to explore efficient and scalable solutions using modern coding practices and tools.</p>
     </section>
 
     <!-- Optional Footer -->
     <footer>
         <p>&copy; Team 07, CSE 210 Fall '24. UC San Diego.</p>
     </footer>
+
+    <script>
+        // Resize iframe based on the content
+        var iframe = document.getElementById('demoFrame');
+        iframe.onload = function() {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        };
+
+        // Ensure text inside iframe is visible (inject CSS into iframe)
+        iframe.onload = function() {
+            var iframeDocument = iframe.contentWindow.document;
+            var style = document.createElement('style');
+            style.innerHTML = 'body { color: #c5c8c6; background-color: #1d1f21; }';
+            iframeDocument.head.appendChild(style);
+
+            iframe.style.height = iframeDocument.body.scrollHeight + 'px'; // Dynamic height adjustment
+        };
+    </script>
 </body>
 </html>
