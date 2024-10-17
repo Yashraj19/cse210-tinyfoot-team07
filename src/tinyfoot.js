@@ -34,7 +34,7 @@ class TinyfootFootnote extends HTMLElement {
     }
     popup.addEventListener("click", (event) => event.stopPropagation());
     if (TinyfootFootnote.bottom) {
-      popup.classList.add("buttom");
+      popup.classList.add("bottom");
     }
   }
 

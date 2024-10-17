@@ -63,18 +63,19 @@
 }
 
 #tinyfoot-popup.bottom {
-  top: auto; 
-  bottom: 40px; 
+  top: auto;
+  bottom: 40px;
   transform: translateX(-50%) translateY(100%);
   transform-origin: bottom center;
-  transition: opacity 200ms ease-in-out, bottom 200ms ease-in-out;
+  transition:
+    opacity 200ms ease-in-out,
+    bottom 200ms ease-in-out;
 }
 
 #tinyfoot-popup.active.bottom {
-  bottom: 80px; 
+  bottom: 80px;
   transform: translateX(-50%) translateY(0);
 }
-
 
 /**
 prevent the note to be covered by the left hand window
