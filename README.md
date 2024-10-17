@@ -11,3 +11,5 @@ npm install && npm start
 ```sh
 npm run format
 ```
+## Live Demo
+https://yashraj19.github.io/cse210-tinyfoot-team07/
