@@ -36,7 +36,7 @@
 
 #tinyfoot-popup {
   display: inline-block;
-  z-index: 99;
+  z-index: 1;
   word-wrap: normal;
   position: absolute;
   top: 40px;
@@ -63,16 +63,27 @@
 }
 
 #tinyfoot-popup.bottom {
-  top: auto; 
-  bottom: 40px; 
-  transform: translateX(-50%) translateY(100%);
-  transform-origin: bottom center;
+  position: fixed; 
+  left: 0; 
+  right: 0; 
+  top: 80%;
+  width:90vw;
+  bottom: -100px;
+  left: 50%;
+  max-height: 40%; 
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transform: translateX(-50%);
+  opacity: 0;
   transition: opacity 200ms ease-in-out, bottom 200ms ease-in-out;
 }
 
 #tinyfoot-popup.active.bottom {
-  bottom: 80px; 
-  transform: translateX(-50%) translateY(0);
+  display: inline-block;
+  padding:10px;
+  bottom: 0px;
+  opacity: 1;
+  transform: translateX(-50%);
 }
 
 
