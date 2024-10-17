@@ -74,6 +74,7 @@
             border: none;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 600px; /* Set a minimum height for the iframe */
         }
         p {
             margin: 10px 0;
@@ -145,7 +146,8 @@
         // Resize iframe based on the content
         var iframe = document.getElementById('demoFrame');
         iframe.onload = function() {
-            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            var iframeDocument = iframe.contentWindow.document;
+            iframe.style.height = iframeDocument.body.scrollHeight + 'px';
         };
 
         // Ensure text inside iframe is visible (inject CSS into iframe)
@@ -155,7 +157,8 @@
             style.innerHTML = 'body { color: #c5c8c6; background-color: #1d1f21; }';
             iframeDocument.head.appendChild(style);
 
-            iframe.style.height = iframeDocument.body.scrollHeight + 'px'; // Dynamic height adjustment
+            // Ensure minimum height
+            iframe.style.height = Math.max(iframeDocument.body.scrollHeight, 600) + 'px'; // Set minimum height to 600px
         };
     </script>
 </body>
