@@ -29,7 +29,9 @@ The plugin is primarily written in CoffeeScript, which compiles to JavaScript. W
 
 ### Tooling:
 
-The project uses Grunt for build automation, which is somewhat dated compared to newer tools like Webpack or Gulp. Grunt has advantages in that it has fewer requirements and easier configurations, but if the project gets larger and more complex, other tools might serve as better alternatives. This is largely because Grunt is a great task runner but not a good module bundler (like Webpack). As projects get larger, it generally gets increasingly difficult to bundle a wide variety of modules and manage numerous dependencies. Moreover, Grunt's configuration, which is managed by Gruntfile, can become challenging to maintain and scale because it is declarative, whereas Gulp and Webpack use a more dynamic and modularized approach. The project also uses Bower, but it is now often recommended to use Yarn or Vite instead. Bower has already been deprecated by its creators. Additionally, unlike npm, which offers the convenient feature of automatically installing a package's required dependencies, Bower lacks this capability, forcing users to manually specify which dependencies each package relies on. With Yarn, however, managing chained dependencies has become much simpler.
+- **Grunt:** The project uses Grunt for build automation, which is somewhat dated compared to newer tools like Webpack or Gulp. Grunt has advantages in that it has fewer requirements and easier configurations, but if the project gets larger and more complex, other tools might serve as better alternatives. This is largely because Grunt is a great task runner but not a good module bundler (like Webpack). As projects get larger, it generally gets increasingly difficult to bundle a wide variety of modules and manage numerous dependencies. Moreover, Grunt's configuration, which is managed by Gruntfile, can become challenging to maintain and scale because it is declarative, whereas Gulp and Webpack use a more dynamic and modularized approach.
+
+- **Bower:** The project also uses Bower, but it is now often recommended to use Yarn or Vite instead. Bower has already been deprecated by its creators. Additionally, unlike npm, which offers the convenient feature of automatically installing a package's required dependencies, Bower lacks this capability, forcing users to manually specify which dependencies each package relies on. With Yarn, however, managing chained dependencies has become much simpler.
 
 ## Repo Organization & Quality
 
@@ -49,20 +51,20 @@ The repository has open issues and one pending pull request, but it hasn’t bee
 
 I would not use this package without modifications due to:
 
-1. jQuery Dependency: Modern web development has moved away from jQuery. Migrating to vanilla JavaScript or a more modern framework is advisable.
+1. **jQuery Dependency**: Modern web development has moved away from jQuery. Migrating to vanilla JavaScript or a more modern framework is advisable.
 
-2. Outdated Tools & Language:CoffeeScript and Grunt are not widely used in modern projects.
+2. **Outdated Tools & Language**:CoffeeScript and Grunt are not widely used in modern projects.
 
-3. Lack of Support for jQuery 3.0+: This limits compatibility with more recent jQuery projects.
+3. **Lack of Support for jQuery 3.0+**: This limits compatibility with more recent jQuery projects.
 
-4. No Unit Tests/CI: The absence of testing makes it difficult to ensure code quality in larger applications.
+4. **No Unit Tests/CI**: The absence of testing makes it difficult to ensure code quality in larger applications.
 
 **Suggested Mitigations**:
 
-1. Rewrite in Vanilla JS/ES6+ (Medium Effort, 2–4 weeks): Replacing jQuery would improve performance and longevity.
+1. **Rewrite in Vanilla JS/ES6+ (Medium Effort, 2–4 weeks)**: Replacing jQuery would improve performance and longevity.
 
-2. Migrate Build System (Low Effort, 1 week): Switch from Grunt to Webpack or Gulp for better build and optimization features.
+2. **Migrate Build System (Low Effort, 1 week)**: Switch from Grunt to Webpack or Gulp for better build and optimization features.
 
-3. Add Unit Tests & CI (Medium Effort, 2 weeks): Adding a testing framework like Jest or Mocha would ensure better code coverage.
+3. **Add Unit Tests & CI (Medium Effort, 2 weeks)**: Adding a testing framework like Jest or Mocha would ensure better code coverage.
 
-4. Add Compatibility with jQuery 3.0+ (Low Effort, 1–2 weeks): Fix the incompatibility issues for broader usage.
+4. **Add Compatibility with jQuery 3.0+ (Low Effort, 1–2 weeks)**: Fix the incompatibility issues for broader usage.
