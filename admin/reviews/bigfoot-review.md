@@ -68,3 +68,24 @@ I would not use this package without modifications due to:
 3. **Add Unit Tests & CI (Medium Effort, 2 weeks)**: Adding a testing framework like Jest or Mocha would ensure better code coverage.
 
 4. **Add Compatibility with jQuery 3.0+ (Low Effort, 1–2 weeks)**: Fix the incompatibility issues for broader usage.
+
+## Changes made
+
+Added unit test to bigfoot by using **jest**.
+
+### About jest
+
+Jest is a popular choice for conducting unit tests due to its comprehensive feature set, ease of use, and excellent performance. It offers built-in tools such as a test runner, assertion library, and test coverage reporting, making it a one-stop solution for JavaScript and TypeScript testing. Jest is highly efficient and optimized, enabling parallel test execution and isolating tests to ensure reliability. Its zero-configuration setup allows developers to start testing right away without the need for complex configurations. Additionally, Jest provides powerful mocking capabilities, which are essential for isolating units of code during testing. With its active community and extensive documentation, Jest simplifies the process of writing and maintaining unit tests, leading to more robust and maintainable codebases.
+
+### Unit tests
+
+We write a total of 15 test cases and conducted 11 differenct tests on bigfoot. We were able to acheive
+
+- 60.81% statement coverage
+- 43.06% branches coverage
+- 64.58% function coverage
+- 61.11% line coverage
+
+![Alt text](6701729386893_.pic.jpg)
+
+the test report can be found in https://github.com/Yashraj19/cse210-tinyfoot-team07/blob/main/demo/bigfoot-unit-test-report.html
