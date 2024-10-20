@@ -31,7 +31,9 @@ The plugin is primarily written in CoffeeScript, which compiles to JavaScript. W
 
 - **Grunt:** The project uses Grunt for build automation, which is somewhat dated compared to newer tools like Webpack or Gulp. Grunt has advantages in that it has fewer requirements and easier configurations, but if the project gets larger and more complex, other tools might serve as better alternatives. This is largely because Grunt is a great task runner but not a good module bundler (like Webpack). As projects get larger, it generally gets increasingly difficult to bundle a wide variety of modules and manage numerous dependencies. Moreover, Grunt's configuration, which is managed by Gruntfile, can become challenging to maintain and scale because it is declarative, whereas Gulp and Webpack use a more dynamic and modularized approach.
 
-- **Bower:** The project also uses Bower, but it is now often recommended to use Yarn or Vite instead. Bower has already been deprecated by its creators. Additionally, unlike npm, which offers the convenient feature of automatically installing a package's required dependencies, Bower lacks this capability, forcing users to manually specify which dependencies each package relies on. With Yarn, however, managing chained dependencies has become much simpler.
+- **Grunt:** The project uses Grunt for build automation. Grunt has advantages in that it has fewer requirements and easier configurations. Grunt is also a great task runner. Thus Grunt was a suitable choice for a project of this scale. But if the project gets larger and more complex, other tools might serve as better alternatives. This is largely because Grunt is a great task runner but not a good module bundler (like Webpack). For larger projects, it generally gets increasingly difficult to bundle a wide variety of modules and manage numerous dependencies. In such cases, options like Gulp or Webpack would be better choices.
+
+- **Bower:** The project also uses Bower. Bower is great for small, front-end projects using libraries like jQuery. Bower maintains a flat dependency tree and has a simple configuration, making it easy to use. Going ahead, for further projects with complex dependencies, it would be better to use Yarn or Vite instead. Unlike npm, which offers the convenient feature of automatically installing a package's required dependencies, Bower lacks this capability, forcing users to manually specify which dependencies each package relies on. With Yarn, on the other hand, managing chained dependencies has become much simpler.
 
 ## Repo Organization & Quality
 
@@ -53,7 +55,7 @@ I would not use this package without modifications due to:
 
 1. **jQuery Dependency**: Modern web development has moved away from jQuery. Migrating to vanilla JavaScript or a more modern framework is advisable.
 
-2. **Outdated Tools & Language**:CoffeeScript and Grunt are not widely used in modern projects.
+2. **Outdated Tools & Language**: CoffeeScript and Grunt are not widely used in modern projects.
 
 3. **Lack of Support for jQuery 3.0+**: This limits compatibility with more recent jQuery projects.
 
