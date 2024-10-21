@@ -75,7 +75,7 @@ Added unit test to bigfoot by using **jest**.
 
 ### About jest
 
-Jest is a popular choice for conducting unit tests due to its comprehensive feature set, ease of use, and excellent performance. It offers built-in tools such as a test runner, assertion library, and test coverage reporting, making it a one-stop solution for JavaScript and TypeScript testing. Jest is highly efficient and optimized, enabling parallel test execution and isolating tests to ensure reliability. Its zero-configuration setup allows developers to start testing right away without the need for complex configurations. Additionally, Jest provides powerful mocking capabilities, which are essential for isolating units of code during testing. With its active community and extensive documentation, Jest simplifies the process of writing and maintaining unit tests, leading to more robust and maintainable codebases.
+Jest is a widely favored tool for unit testing, known for its rich feature set, user-friendly interface, and strong performance. It comes with integrated components like a test runner, assertion library, and coverage reporting, offering a complete testing solution for JavaScript and TypeScript projects. Jest is highly optimized for efficiency, allowing parallel test execution and ensuring test reliability through isolation. Its zero-configuration design lets developers start testing immediately without dealing with complex setups. Jest also offers robust mocking capabilities, which are crucial for isolating code units during testing. With its active community and thorough documentation, Jest streamlines the process of writing and maintaining unit tests, resulting in more reliable and maintainable codebases.
 
 ### Unit tests
 
